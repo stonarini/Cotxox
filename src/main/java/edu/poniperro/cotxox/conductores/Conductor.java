@@ -49,7 +49,7 @@ public class Conductor {
 	}
 
 	private void calcularValoracionMedia() {
-		int sumValoraciones = valoraciones.stream()
+		double sumValoraciones = valoraciones.stream()
 				.map(b -> Byte.toUnsignedInt(b))
 				.reduce(0, (a, b) -> a + b);
 		this.valoracionMedia = sumValoraciones / getNumeroValoraciones();

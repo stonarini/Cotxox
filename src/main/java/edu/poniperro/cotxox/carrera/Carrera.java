@@ -1,6 +1,8 @@
 package edu.poniperro.cotxox.carrera;
 
 import edu.poniperro.cotxox.conductores.Conductor;
+import edu.poniperro.cotxox.conductores.PoolConductores;
+import edu.poniperro.cotxox.tarifa.Tarifa;
 
 public class Carrera {
 	private String tarjetaCredito;
@@ -17,7 +19,7 @@ public class Carrera {
 		this.tarjetaCredito = tarjetaCredito;
 	}
 
-	public String getTarjeta() {
+	public String getTarjetaCredito() {
 		return tarjetaCredito;
 	}
 
@@ -45,6 +47,10 @@ public class Carrera {
 		return distancia;
 	}
 
+	public double getCosteEsperado() {
+		return Tarifa.getCosteTotalEsperado(this);
+	}
+
 	public int getTiempoEsperado() {
 		return tiempoEsperado;
 	}
@@ -69,6 +75,14 @@ public class Carrera {
 		return conductor;
 	}
 
+	public void asignarConductor(PoolConductores conductores) {
+		setConductor(conductores.asignarConductor());
+	}
+
+	public void realizarPago(double pago) {
+		this.costeTotal = pago;
+	}
+
 	public double getCosteTotal() {
 		return costeTotal;
 	}
@@ -83,7 +97,5 @@ public class Carrera {
 
 	public void liberarConductor() {
 		getConductor().setOcupado(false);
-		setConductor(null);
 	}
-
 }

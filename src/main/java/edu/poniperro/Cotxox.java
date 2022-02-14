@@ -1,4 +1,4 @@
-package edu.poniperro.cotxox;
+package edu.poniperro;
 
 import java.util.ArrayList;
 import java.util.List;

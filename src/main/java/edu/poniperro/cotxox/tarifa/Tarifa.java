@@ -1,5 +1,7 @@
 package edu.poniperro.cotxox.tarifa;
 
+import edu.poniperro.cotxox.carrera.Carrera;
+
 public class Tarifa {
 
 	final static double COSTE_MILLA = 1.35;

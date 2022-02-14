@@ -9,4 +9,8 @@ public class PoolConductores {
 	public PoolConductores(List<Conductor> conductores) {
 		this.poolConductores = conductores;
 	}
+
+	public List<Conductor> getPoolConductores() {
+		return poolConductores;
+	}
 }

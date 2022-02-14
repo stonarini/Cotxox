@@ -81,7 +81,7 @@
                         <archive>
                             <manifest>
                                 <!-- FIXME change it to the project's main class -->
-                                <mainClass>edu.poniperro.App</mainClass>
+                                <mainClass>edu.poniperro.Cotxox</mainClass>
                                 <!-- https://maven.apache.org/shared/maven-archiver/examples/manifest.html -->
                                 <!-- addDefaultImplementationEntries bool -->
                                 <!-- addDefaultSpecificationEntries bool -->

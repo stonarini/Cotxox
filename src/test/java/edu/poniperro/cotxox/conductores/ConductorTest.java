@@ -61,6 +61,6 @@ public class ConductorTest {
 
 		assertEquals(5, conductor.getValoracion(), 0);
 		assertEquals(3, conductor.getNumeroValoraciones());
-
 	}
+
 }

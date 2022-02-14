@@ -1,6 +1,7 @@
 package edu.poniperro.cotxox.conductores;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -38,4 +39,12 @@ public class PoolConductoresTest {
 		assertTrue(poolConductores.getPoolConductores().get(i).isOcupado());
 	}
 
+	@Test
+	public void allConductoresOcupadosTest() {
+		poolConductores.asignarConductor();
+		poolConductores.asignarConductor();
+		poolConductores.asignarConductor();
+		poolConductores.asignarConductor();
+		assertNull(poolConductores.asignarConductor());
+	}
 }

@@ -1,12 +1,14 @@
 package edu.poniperro.cotxox.tarifa;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
 import edu.poniperro.cotxox.carrera.Carrera;
 
 public class TarifaTest {
+
 	@Test
 	public void costeDistanciaTest() {
 		assertEquals(13.5, Tarifa.getCosteDistancia(10), 0);
@@ -31,6 +33,12 @@ public class TarifaTest {
 		carrera.setTiempoEsperado(1);
 		carrera.setDistancia(1);
 		assertEquals(5, Tarifa.getCosteTotalEsperado(carrera), 0);
+	}
+
+	@Test
+	public void sweet100Test() {
+		Tarifa tarifa = new Tarifa();
+		assertNotNull(tarifa);
 	}
 
 }
